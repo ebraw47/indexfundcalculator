@@ -125,7 +125,7 @@ export function Calculator() {
   const [stepUp, setStepUp] = useState(0);
   const [importNote, setImportNote] = useState("");
   const [holdings, setHoldings] = useState<HoldingSlice[]>([]);
-  const [applyFlash, setApplyFlash] = useState(0);
+  const [applyFlash, setApplyFlash] = useState(false);
 
   function applyFund(nextTicker: string) {
     const next = INDEX_FUNDS.find((f) => f.ticker === nextTicker);
@@ -168,7 +168,8 @@ export function Calculator() {
     setInflation(inflationVal);
     setStepUp(stepUpVal);
     setDrip(dripVal);
-    setApplyFlash((n) => n + 1);
+    setApplyFlash(true);
+    window.setTimeout(() => setApplyFlash(false), 1200);
 
     const mix =
       holdingRows.length > 1
@@ -421,7 +422,6 @@ export function Calculator() {
           id="calc-results"
           aria-live="polite"
           aria-label="Projected balance screen"
-          key={applyFlash}
         >
           <div className="calc-screen-bezel">
             <div className="calc-screen-notch" aria-hidden />

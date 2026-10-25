@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 function MailIcon() {
@@ -25,14 +24,13 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link href="/" className="brand" aria-label="INDEX FUND home">
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src="/images/brand/header-logo.webp"
           alt="INDEX FUND"
+          className="brand-logo"
           width={120}
           height={62}
-          className="brand-logo"
-          style={{ width: 120, height: "auto", maxHeight: 48 }}
-          priority
         />
       </Link>
       <div className="header-end">

@@ -87,10 +87,10 @@ body::before {
 }
 
 .brand-logo {
-  width: 120px !important;
-  height: auto !important;
-  max-height: 48px !important;
+  height: 48px;
+  width: auto;
   object-fit: contain;
+  display: block;
 }
 
 .brand-text {
@@ -155,7 +155,6 @@ body::before {
 
 .hero {
   padding: 2.5rem 0 1.25rem;
-  animation: rise 0.7s ease-out both;
 }
 
 @keyframes rise {
@@ -234,7 +233,6 @@ body::before {
   grid-template-columns: 1.05fr 1fr;
   gap: 1.35rem;
   margin: 1.5rem 0 3rem;
-  animation: rise 0.85s 0.12s ease-out both;
   align-items: start;
 }
 
