@@ -137,13 +137,13 @@ export function DocumentUpload({ onApply }: Props) {
           borderRadius: "1.25rem",
           cursor: busy ? "wait" : "pointer",
           border: dragOver
-            ? "2px solid #2f9e6d"
-            : "2px dashed rgba(15, 46, 36, 0.28)",
+            ? "2px solid #e86f3c"
+            : "2px dashed rgba(92, 52, 40, 0.28)",
           background: dragOver
-            ? "linear-gradient(135deg, #d8f3e6, #ffffff)"
-            : "linear-gradient(135deg, #0f2e24 0%, #1a5c45 48%, #2f9e6d 100%)",
-          boxShadow: "0 16px 40px rgba(15, 46, 36, 0.22)",
-          color: "#f4fbf7",
+            ? "linear-gradient(135deg, #ffe8d6, #ffffff)"
+            : "linear-gradient(135deg, #5c3428 0%, #a85a35 48%, #e86f3c 100%)",
+          boxShadow: "0 16px 40px rgba(92, 52, 40, 0.18)",
+          color: dragOver ? "#1c100c" : "#fff4ec",
           transition: "transform 0.15s ease, border-color 0.15s ease",
           transform: dragOver ? "scale(1.01)" : "none",
         }}
@@ -157,8 +157,13 @@ export function DocumentUpload({ onApply }: Props) {
             borderRadius: 16,
             display: "grid",
             placeItems: "center",
-            background: "rgba(255,255,255,0.14)",
-            border: "1px solid rgba(255,255,255,0.22)",
+            background: dragOver
+              ? "rgba(232,111,60,0.14)"
+              : "rgba(255,255,255,0.16)",
+            border: dragOver
+              ? "1px solid rgba(232,111,60,0.28)"
+              : "1px solid rgba(255,255,255,0.22)",
+            color: dragOver ? "#e86f3c" : "#fff4ec",
           }}
         >
           <svg
@@ -197,8 +202,8 @@ export function DocumentUpload({ onApply }: Props) {
             flexShrink: 0,
             padding: "0.7rem 1.15rem",
             borderRadius: 999,
-            background: "#fff",
-            color: "#0f2e24",
+            background: dragOver ? "#e86f3c" : "#fff",
+            color: dragOver ? "#fff4ec" : "#5c3428",
             fontWeight: 750,
             fontSize: "0.92rem",
             boxShadow: "0 6px 16px rgba(0,0,0,0.12)",
@@ -215,7 +220,7 @@ export function DocumentUpload({ onApply }: Props) {
             marginTop: 10,
             height: 7,
             borderRadius: 999,
-            background: "rgba(15,46,36,0.12)",
+            background: "rgba(92,52,40,0.12)",
             overflow: "hidden",
           }}
         >
@@ -224,7 +229,7 @@ export function DocumentUpload({ onApply }: Props) {
               display: "block",
               height: "100%",
               width: `${Math.round(progress * 100)}%`,
-              background: "linear-gradient(90deg, #1a5c45, #5dcc95)",
+              background: "linear-gradient(90deg, #c45a2e, #ff8a4c)",
               transition: "width 0.2s ease",
             }}
           />
@@ -236,7 +241,7 @@ export function DocumentUpload({ onApply }: Props) {
             margin: "0.55rem 0 0",
             fontSize: "0.9rem",
             fontWeight: 600,
-            color: "#0f2e24",
+            color: "#5c3428",
           }}
         >
           {status}
@@ -248,7 +253,7 @@ export function DocumentUpload({ onApply }: Props) {
             margin: "0.55rem 0 0",
             fontSize: "0.9rem",
             fontWeight: 600,
-            color: "#9a3412",
+            color: "#c2410c",
           }}
         >
           {error}
@@ -261,7 +266,7 @@ export function DocumentUpload({ onApply }: Props) {
             marginTop: "0.85rem",
             padding: "1rem 1.1rem",
             borderRadius: "1rem",
-            border: "1px solid rgba(15,46,36,0.14)",
+            border: "1px solid rgba(92,52,40,0.14)",
             background: "rgba(255,255,255,0.75)",
           }}
         >
@@ -275,7 +280,7 @@ export function DocumentUpload({ onApply }: Props) {
             Detected fields
           </h3>
           {fieldCount === 0 ? (
-            <p style={{ margin: 0, color: "#6b8578", fontSize: "0.9rem" }}>
+            <p style={{ margin: 0, color: "#8a6554", fontSize: "0.9rem" }}>
               No structured fields matched.
             </p>
           ) : (
@@ -290,7 +295,7 @@ export function DocumentUpload({ onApply }: Props) {
               {parsed.matches.map((m) => (
                 <li key={`${m.field}-${m.value}`}>
                   <strong>{m.field}</strong>: {m.value}
-                  <span style={{ color: "#6b8578" }}> — {m.evidence}</span>
+                  <span style={{ color: "#8a6554" }}> — {m.evidence}</span>
                 </li>
               ))}
             </ul>
@@ -313,8 +318,8 @@ export function DocumentUpload({ onApply }: Props) {
                 border: "none",
                 borderRadius: 999,
                 padding: "0.65rem 1.15rem",
-                background: "#2f9e6d",
-                color: "#062016",
+                background: "#e86f3c",
+                color: "#fff4ec",
                 font: "inherit",
                 fontWeight: 700,
                 cursor: "pointer",
@@ -330,7 +335,7 @@ export function DocumentUpload({ onApply }: Props) {
                 style={{
                   whiteSpace: "pre-wrap",
                   wordBreak: "break-word",
-                  background: "rgba(15,46,36,0.05)",
+                  background: "rgba(92,52,40,0.05)",
                   borderRadius: "0.6rem",
                   padding: "0.75rem",
                   maxHeight: 180,

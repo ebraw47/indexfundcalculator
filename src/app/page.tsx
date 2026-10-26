@@ -97,6 +97,21 @@ export default function HomePage() {
           frequency, years invested, expected long-run return, dividend
           reinvestment, and — critically — the fund’s expense ratio.
         </p>
+        <figure className="topic-figure">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/topics/index-diversification.webp"
+            alt="Many holdings combining into one diversified index fund portfolio"
+            width={1280}
+            height={720}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
+            Index funds bundle hundreds or thousands of holdings into one
+            transparent, low-cost portfolio that tracks a market benchmark.
+          </figcaption>
+        </figure>
         <p>
           Index funds and ETFs aim to match an index rather than beat it. That
           rules-based design keeps costs low and holdings transparent. Vanguard’s
@@ -164,6 +179,21 @@ export default function HomePage() {
           total-market fund cannot without a systemic collapse of listed
           businesses).
         </p>
+        <figure className="topic-figure">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/topics/index-dca.webp"
+            alt="Regular scheduled contributions building an index fund balance over time"
+            width={1280}
+            height={720}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
+            DCA invests fixed amounts on a schedule — more shares when prices are
+            low, fewer when they are high.
+          </figcaption>
+        </figure>
         <p>
           Practitioner guides commonly recommend a single total-market fund (VTI,
           FSKAX, SWTSX, or Fidelity’s 0% FZROX where available) or a two-fund US +
@@ -186,6 +216,21 @@ export default function HomePage() {
           come out of NAV rather than as a separate brokerage bill, so they are
           easy to ignore — until compounding makes them impossible to ignore.
         </p>
+        <figure className="topic-figure">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/topics/index-expense-ratios.webp"
+            alt="Comparison of low-fee versus high-fee index fund growth over decades"
+            width={1280}
+            height={720}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
+            Higher fees quietly shrink the balance that can keep compounding —
+            over decades the gap can reach six figures.
+          </figcaption>
+        </figure>
         <p>
           Important nuance from fee research: published fund total returns are
           already net of the expense ratio. Do not subtract the ER again from a

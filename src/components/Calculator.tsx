@@ -44,8 +44,8 @@ const CHEVRON_STYLE: CSSProperties = {
   alignItems: "center",
   justifyContent: "center",
   pointerEvents: "none",
-  color: "#0f2e24",
-  borderLeft: "1px solid rgba(15, 46, 36, 0.14)",
+  color: "#5c3428",
+  borderLeft: "1px solid rgba(92, 52, 40, 0.18)",
 };
 
 function FieldSelect({
